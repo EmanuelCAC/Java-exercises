@@ -8,29 +8,26 @@ import java.util.Scanner;
 
 /**
  *
- * @author cg3028691
+ * @author Emanuel
  */
-public class ex02 {
+public class ex05 {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        int anos, meses, dias, idade;
+        int n, n1, n2, n3;
         
-        System.out.println("Qual a sua idade em anos:  ");
+        System.out.println("Digite um numero de 100-999: ");
         Scanner sc = new Scanner(System.in);
-        anos = sc.nextInt();
+        n = sc.nextInt();
         
-        System.out.println("meses:  ");
-        meses = sc.nextInt();
+        n1 = n/100;
+        n2 = (n/10 - n1*10);
+        n3 = (n%10);
         
-        System.out.println("e dias:  ");
-        dias = sc.nextInt();
-        
-        idade = dias + (meses*30) + (anos*365);
-        System.out.println(anos + " anos, " + meses + " meses e " + dias + " dias = " + idade + " dias.");
+        System.out.println("Valor final: "+n3+n2+n1);
     }
     
 }

@@ -8,29 +8,32 @@ import java.util.Scanner;
 
 /**
  *
- * @author cg3028691
+ * @author Emanuel
  */
-public class ex02 {
+public class ex04 {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        int anos, meses, dias, idade;
+        float j, c, i;
+        int t;
         
-        System.out.println("Qual a sua idade em anos:  ");
+        System.out.println("Digite o capital inicial: ");
         Scanner sc = new Scanner(System.in);
-        anos = sc.nextInt();
+        c = sc.nextFloat();
         
-        System.out.println("meses:  ");
-        meses = sc.nextInt();
+        System.out.println("Digite a taxa de juros(%): ");
+        i = sc.nextFloat();
+        i = i/100f;
         
-        System.out.println("e dias:  ");
-        dias = sc.nextInt();
+        System.out.println("Digite o tempo da aplciacao: ");
+        t = sc.nextInt();
         
-        idade = dias + (meses*30) + (anos*365);
-        System.out.println(anos + " anos, " + meses + " meses e " + dias + " dias = " + idade + " dias.");
+        j = c*i*t;
+        
+        System.out.println("Valor do juros: R$ " + j);
     }
     
 }
