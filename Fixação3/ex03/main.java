@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package Fixação3.ex02;
+package Fixação3.ex03;
 
 /**
  *
@@ -15,15 +15,11 @@ public class main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Funcionario f1 = new Funcionario("Joao", "A12", "02/02/2000", "55544433322", 2800);
+        contaBancaria conta1 = new contaBancaria("123432", 3587.63);
         
-        System.out.println("Slario: " + f1.salario);
-        
-        f1.recebeAumento(120.12);
-        System.out.println("Novo salario: " + f1.salario);
-        
-        System.out.println("Novo salario anual: " + f1.calculaGanhoAnual());
-
+        conta1.extrato();
+        conta1.saque(1500);
+        conta1.deposito(200);
     }
     
 }
