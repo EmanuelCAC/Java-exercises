@@ -3,19 +3,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package fixação05.ex04;
-
 /**
  *
- * @author cg3028691
+ * @author Emanuel
  */
-public class Biscoito extends Produto {
+public class Leite extends Produto {
     
-    public Biscoito(String nome, int preco, int qtd_comp_cancerigenos) {
-        super(nome, preco, qtd_comp_cancerigenos);
+    public Leite(String nome, int preco, int validade) {
+        super(nome, preco, validade);
     }
 
     @Override
     public int compareTo(Produto a) {
-        return (this.preco * this.carac_unica) - (a.preco * a.carac_unica);
+        return  (this.preco * 100 / this.carac_unica) - (a.preco * 100 / a.carac_unica);
     }
 }

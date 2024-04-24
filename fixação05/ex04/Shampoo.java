@@ -9,20 +9,18 @@ package fixação05.ex04;
  * @author cg3028691
  */
 public class Shampoo extends Produto{
-    int irritabilidade = 1;
     
     public Shampoo(String nome, int preco, int irritabilidade) {
-        super(nome, preco);
-        this.irritabilidade = irritabilidade;
+        super(nome, preco, irritabilidade);
     }
     
+    /**
+     *
+     * @param a
+     * @return
+     */
     @Override
-    public int compareTo(Object a) {
-        if(this.nome.compareTo(a.nome) != 0) {
-            return this.nome.compareTo(a.nome);
-        }
-        else {
-            return (this.preco * this.irritabilidade) - (a.preco * a.irritabilidade);
-        }
+    public int compareTo(Produto a) {
+        return (this.preco * this.carac_unica) - (a.preco * a.carac_unica);
     }
 }
